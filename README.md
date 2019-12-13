@@ -1,8 +1,19 @@
-# fluent-plugin-out-http, a plugin for [Fluentd](http://fluentd.org)
+# fluent-plugin-out-graylog-http, a plugin for [Fluentd](http://fluentd.org)
 
-A generic [fluentd][1] output plugin for sending logs to an HTTP endpoint.
+A generic [fluentd][1] output plugin for sending logs to graylog via HTTP client.
 
-[![Build Status](https://travis-ci.org/fluent-plugins-nursery/fluent-plugin-out-http.svg?branch=master)](https://travis-ci.org/fluent-plugins-nursery/fluent-plugin-out-http)
+[![Build Status](https://travis-ci.org/mk811/fluent-plugin-out-graylog-http.svg?branch=master)](https://travis-ci.org/mk811/fluent-plugin-out-graylog-http)
+
+This is mostly based on [fluent-plugin-out-http](https://github.com/fluent-plugins-nursery/fluent-plugin-out-http).  
+THe only additions are modifying record to json format.
+
+## Constraints
+
+Current version supports json format only. You need to format to Json at the prior filters to this output plugin.
+
+## How to configure
+
+Mostly referred from [fluent-plugin-out-http](https://github.com/fluent-plugins-nursery/fluent-plugin-out-http).
 
 ## Configuration options
 
@@ -38,10 +49,10 @@ To send events with bulk_request, you should specify `bulk_request` as `true`
 Note that when this parameter as `true`, Fluentd always send events as `application/x-ndjson`.
 Currently, `application/x-ndjson` is only supported MIME type for bulk_request.
 
-----
+---
 
 Heavily based on [fluent-plugin-growthforecast][2]
 
-  [1]: http://fluentd.org/
-  [2]: https://github.com/tagomoris/fluent-plugin-growthforecast
-  [3]: https://github.com/sabottenda/fluent-plugin-bufferize
+[1]: http://fluentd.org/
+[2]: https://github.com/tagomoris/fluent-plugin-growthforecast
+[3]: https://github.com/sabottenda/fluent-plugin-bufferize

@@ -1,13 +1,13 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |gem|
-  gem.name          = "fluent-plugin-out-http"
-  gem.version       = "1.3.3"
-  gem.authors       = ["Marica Odagaki"]
-  gem.email         = ["ento.entotto@gmail.com"]
-  gem.summary       = %q{A generic Fluentd output plugin to send logs to an HTTP endpoint}
+  gem.name          = "fluent-plugin-out-graylog-http"
+  gem.version       = "1.0.0"
+  gem.authors       = ["Mitsufumi Kikyotani"]
+  gem.email         = ["mkikyotani@gmail.com"]
+  gem.summary       = %q{A generic Fluentd output plugin to send logs to graylog via HTTP}
   gem.description   = gem.summary
-  gem.homepage      = "https://github.com/fluent-plugins-nursery/fluent-plugin-out-http"
+  gem.homepage      = "https://github.com/fluent-plugins-nursery/fluent-plugin-out-graylog-http"
   gem.licenses      = ["Apache-2.0"]
 
   gem.files         = `git ls-files`.split($\)
